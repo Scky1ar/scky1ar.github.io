@@ -66,3 +66,7 @@ main {
   margin: 0 auto;
   width: 80%;
 }
+
+a {
+  color: #14B6F3; !important
+}
