@@ -17,7 +17,7 @@ main {
 
 .bv-video-wrap::before {
   /* Optional overlay */
-  content: url(assets/images/veerlogo.png);
+  content:'';
   position: absolute;
   height: 100%;
   width: 100%;
