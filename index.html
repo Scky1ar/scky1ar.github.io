@@ -10,11 +10,11 @@
   <link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css">
   <link href="css/bootstrap-reboot.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
-
-  <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+  <!--<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>-->
 </head>
 <body>
-  <nav class="navbar navbar-default navbar-transparent navbar-fixed-top">
+  <nav class="navbar navbar-dark navbar-transparent fixed-top">
     <div class="centered-nav">
       <center>
       <ul>
@@ -27,20 +27,23 @@
     </center>
   </div>
   </nav>
-  <div class="container-fluid">
-    <a-scene class="video-container" embedded vr-mode-ui="enabled: false">
-      <a-assets>
-        <!-- Single source video. -->
-        <video id="video" muted autoplay loop playsinline>
-          <source src="assets/videos/Timelapse.webm" type="video/webm">
-        </video>
-        <img id="logo" src="assets/images/veerlogo.png">
-      </a-assets>
-      <a-entity camera reverse-look-controls></a-entity>
-      <a-videosphere src="#video"></a-videosphere>
-      <a-image src="#logo"></a-image>
+    <img src="assets/images/veerlogo.png">
+  <!--<div class="video-container">
+    <video muted autoplay loop>
+      <source src="assets/videos/Timelapse.webm" type="video/webm">
+    </video>
+  </div>-->
+  <a-scene class="video-container" embedded vr-mode-ui="enabled: false">
+    <a-entity camera reverse-look-controls></a-entity>
+    <a-videosphere src="#video"></a-videosphere>
+    <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
+    <a-assets>
+      <!-- Single source video. -->
+      <video id="video" muted autoplay loop playsinline>
+        <source src="assets/videos/Timelapse.webm" type="video/webm"/>
+      </video>
+    </a-assets>
+  </a-scene>
 
-    </a-scene>
-  </div>
 </body>
 </html>
