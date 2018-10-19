@@ -29,12 +29,6 @@
   </nav>
   <div class="container-fluid">
     <a-scene class="video-container" embedded vr-mode-ui="enabled: false">
-      <a-entity camera reverse-look-controls></a-entity>
-      <a-videosphere src="#video">
-      <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
-      <a-videosphere src="#video" rotation="30 180 0">
-      </a-videosphere>
-      <a-image src="#logo"></a-image>
       <a-assets>
         <!-- Single source video. -->
         <video id="video" muted autoplay loop playsinline>
@@ -42,6 +36,13 @@
         </video>
         <img id="logo" src="assets/images/veerlogo.png">
       </a-assets>
+      <a-entity camera reverse-look-controls></a-entity>
+      <a-videosphere src="#video">
+      <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
+      <a-videosphere src="#video" rotation="30 180 0">
+      </a-videosphere>
+      <a-image src="#logo"></a-image>
+
     </a-scene>
   </div>
 </body>
