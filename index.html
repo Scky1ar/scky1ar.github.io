@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <title>Veer Immersive Technologies</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap-grid.css" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap-reboot.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+
+  <script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-default navbar-transparent navbar-fixed-top">
+    <div class="centered-nav">
+      <center>
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Vectus</a></li>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="">The Team</a></li>
+        <li><a href="">Contact Us</a></li>
+      </ul>
+    </center>
+    <div>
+  </nav>
+  <section>
+    <a-scene class="video-container" embedded vr-mode-ui="enabled: false">
+      <a-entity camera reverse-look-controls></a-entity>
+      <a-videosphere src="#video">
+      <a-entity camera look-controls="reverseMouseDrag: true"></a-entity>
+      <a-videosphere src="#video" rotation="30 180 0">
+      </a-videosphere>
+      <a-image src="#logo"></a-image>
+      <a-assets>
+        <!-- Single source video. -->
+        <video id="video" muted autoplay loop playsinline>
+          <source src="assets/videos/Timelapse.webm" type="video/webm"/>
+        </video>
+        <img id="logo" src="assets/veerlogo.png">
+      </a-assets>
+    </a-scene>
+  </section>
+</body>
+</html>
