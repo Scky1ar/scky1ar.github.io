@@ -14,3 +14,7 @@ li {
 .navbar-transparent {
   background-color: rgba(0,0,0,0);
 }
+
+.video-container {
+  position: relative;
+}
