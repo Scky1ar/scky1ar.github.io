@@ -18,3 +18,9 @@ li {
 .video-container {
   position: relative;
 }
+
+video {
+  height: auto;
+  vertical-align: middle;
+  width: 100%;
+}
